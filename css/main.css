@@ -1,12 +1,15 @@
 .sidebar {
     width: 20%;
+    min-width: 20%;
     background-color: #979797;
     color: #000000;
     padding: 20px;
+
+    height: 100%;
 }
 .nav-dashboard{
     background-color: rgb(0, 0, 0);
-    height:200px;
+    height:240px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -53,6 +56,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 80%;
+    max-width: 80%;
 }
 
 .widget-list {
@@ -62,6 +67,16 @@
     height: 100%;
 }
 
+.widget {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    min-width: 150px; /* Minimum width */
+    min-height: 150px; /* Minimum height */
+    
+}
 .widget.main {
     width: 100%;
     height: 100%;
@@ -85,19 +100,53 @@
 
     border-radius: 10px;
     font-size: 32px;
+
+    max-width: 100%;
 }
 
 
 .big-widget-box{
     background-color: bisque;
-    height: 30%;
+    min-height: 30%;
     width: 100%;
 
     padding: 20px;
 }
 
-.small-widget-box{
+/* .small-widget-box{
     background-color: brown;
     height: 70%;
     width: 100%;
+
+} */
+
+.small-widget-box {
+    background-color: brown;
+    min-height: 70%;
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    position: relative;
+    /* Add grid background */
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent);
+    background-size: 20px 20px; /* Adjust to match grid size */
+}
+
+
+
+
+.resizable {
+    resize: both;
+    overflow: auto;
+}
+
+.resizer {
+    width: 10px;
+    height: 10px;
+    background: #333;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
 }
